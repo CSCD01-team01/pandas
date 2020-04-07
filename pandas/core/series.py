@@ -1332,9 +1332,6 @@ class Series(base.IndexOpsMixin, generic.NDFrame):
         4    1
         dtype: int64
 
-        Assignment is allowed though by default the original DataFrame is not
-        modified.
-
         >>> op = f"1.2 {'+'} index"
         >>> series.eval(op)
         0    1.2
@@ -1344,7 +1341,9 @@ class Series(base.IndexOpsMixin, generic.NDFrame):
         4    5.2
         dtype: float64
 
-        Use ``inplace=True`` to modify the original DataFrame.
+        Assignment is allowed though by default the original Series is not
+        modified.
+        Use ``inplace=True`` to modify the original Seires.
 
         >>> dict1 = {"a": 1}
         >>> dict2 = {"b": 2}
